@@ -18,7 +18,10 @@ function MyApp({ Component, pageProps }) {
           content="front-end web developer landing page with latest projects and github links"
           key="description"
         />
-        <meta property="og:image" content="/public/thumb.png" />
+        <meta
+          property="og:image"
+          content="https://jordansmith.cc/public/thumb.png"
+        />
 
         <meta
           name="twitter:card"
@@ -43,7 +46,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           name="twitter:image"
-          content="/public/thumb.png"
+          content="https://jordansmith.cc/public/thumb.png"
           key="twitter-content"
         />
       </Head>
