@@ -14,8 +14,14 @@ const Project = ({ projectTitle, projectLink, className }) => {
         <div className="background">
           <h3 className="project-title">{projectTitle}</h3>
 
-          <div>
-            <Image src={GitHubLogo} alt="Git Hub Logo" height={30} width={30} />
+          <div className="project-github-link">
+            <Image
+              className="github-logo"
+              src={GitHubLogo}
+              alt="Git Hub Logo"
+              height={30}
+              width={30}
+            />
             <p>Github</p>
           </div>
         </div>

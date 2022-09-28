@@ -30,15 +30,17 @@
 }
 
 
-
-
 /*Project Cards*/
 
-.project-1, .project-2, .project-3 {
+.projects-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
 
+.project-1, .project-2, .project-3 {
     padding: 4px;
     border-radius: 10px;
-    width: 250px
+    width: 230px;
 }
 
 .background {
@@ -46,7 +48,7 @@
     color: #fff;
     border-radius: 10px;
     padding: 1em;
-    height: 200px;
+    height: 180px;
   }
 
 .projects-container {
@@ -65,6 +67,16 @@
 .project-3 {
     background-image: linear-gradient(to right,#d8a7d5,#7551d9);
 
+}
+
+.project-github-link {
+    display: flex;
+    align-items: center;
+    margin-top: 95px;
+}
+
+.project-github-link p {
+    margin-left: 10px;
 }
 
 /*Github plug*/

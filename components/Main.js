@@ -3,8 +3,8 @@ import Project from "./Project";
 const Main = () => {
   return (
     <>
-      <section className="main_content">
-        <h2>Recent Projects</h2>
+      <section className="main-content">
+        <h2 className="projects-title">Recent Projects</h2>
         <div className="projects-container">
           <Project
             projectTitle="React Pokedex"
