@@ -26,9 +26,23 @@ const Main = () => {
       <section className="github-plug">
         <h3 className="github-plug-title">All projects available on Github</h3>
         <div className="github-plug-cta">
-          <p className="github-plug-username">c0descrub</p>
-          <div>Follow</div>
-          <div>See all projects</div>
+          <p className="github-plug-cta--username">c0descrub</p>
+          <div className="github-plug-cta--buttons">
+            <a
+              href="https://github.com/c0descrub"
+              aria-label="Follow c0descrub on github"
+            >
+              <button className="button follow-button">Follow</button>
+            </a>
+            <a
+              href="https://github.com/c0descrub?tab=repositories"
+              aria-label="See all c0descrub repositories on github"
+            >
+              <button className="button projects-button">
+                See all projects
+              </button>
+            </a>
+          </div>
         </div>
       </section>
     </>
