@@ -4,22 +4,23 @@ import GitHubLogo from "../public/GitHub_logo.png";
 
 const Project = ({ projectTitle, projectLink, className }) => {
   return (
-    <div className={className}>
-      <div className="background">
-        <h3 className="project-title">{projectTitle}</h3>
-        <a
-          href={projectLink}
-          className="project-link"
-          target="_blank"
-          rel="noreferrer"
-        >
+    <a
+      href={projectLink}
+      className="project-link"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <div className={className}>
+        <div className="background">
+          <h3 className="project-title">{projectTitle}</h3>
+
           <div>
             <Image src={GitHubLogo} alt="Git Hub Logo" height={30} width={30} />
             <p>Github</p>
           </div>
-        </a>
+        </div>
       </div>
-    </div>
+    </a>
   );
 };
 

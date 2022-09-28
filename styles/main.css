@@ -3,7 +3,7 @@
     margin: auto;
 }
 .project-1, .project-2, .project-3 {
-    margin: auto;
+
     padding: 4px;
     border-radius: 10px;
     width: 250px
@@ -19,8 +19,8 @@
 
 .projects-container {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: space-between;
+
 }
 .project-1 {
     background-image: linear-gradient(to right,#fde68a,#fca5a5,#fecaca);
