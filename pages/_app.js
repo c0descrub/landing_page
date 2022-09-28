@@ -13,7 +13,11 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:url" content="https://jordansmith.cc/" key="url" />
         <meta property="og:type" content="website" key="type" />
         <meta property="og:title" content="Jordan Smith" key="title" />
-        <meta property="og:description" content="undefined" key="description" />
+        <meta
+          property="og:description"
+          content="front-end web developer landing page with latest projects and github links"
+          key="description"
+        />
         <meta property="og:image" content="" />
 
         <meta
@@ -34,7 +38,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:title" content="Jordan Smith" key="twitter-title" />
         <meta
           name="twitter:description"
-          content="undefined"
+          content="front-end web developer landing page with latest projects and github links"
           key="twitter-description"
         />
         <meta name="twitter:image" content="" key="twitter-content" />
