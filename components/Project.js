@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import GitHubLogo from "../public/GitHub_logo.png";
 
 const Project = ({ projectTitle, projectLink, className, hostLink }) => {
@@ -19,7 +18,7 @@ const Project = ({ projectTitle, projectLink, className, hostLink }) => {
           <Image
             className="github-logo"
             src={GitHubLogo}
-            alt="Github Logo"
+            alt={"Github Logo"}
             height={30}
             width={30}
           />
