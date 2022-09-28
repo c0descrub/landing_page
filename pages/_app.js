@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }) {
           content="Frontend Developer working in React.js"
           key="description"
         />
-        <meta property="og:image" content="/profile_pic.png" key="image" />
+        <meta property="og:image" content="/thumbnail.png" key="image" />
 
         <meta
           name="twitter:card"
@@ -56,11 +56,7 @@ function MyApp({ Component, pageProps }) {
           content="Frontend Developer working in React.js"
           key="twitter-description"
         />
-        <meta
-          name="twitter:image"
-          content="/profile_pic.png"
-          key="twitter-img"
-        />
+        <meta name="twitter:image" content="/thumbnail.png" key="twitter-img" />
       </Head>
     </>
   );
