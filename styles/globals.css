@@ -20,3 +20,8 @@ h1, h2, h3, html, body, a, p, div, section {
 * {
   box-sizing: border-box;
 }
+
+.site-container {
+  max-width: 768px;
+  margin: auto;
+}

@@ -4,13 +4,19 @@ const Footer = () => {
       <hr></hr>
       <ul>
         <li>
-          <a>Github</a>
+          <a href="#" target="_blank" rel="noreferrer">
+            Github
+          </a>
         </li>
         <li>
-          <a>CV</a>
+          <a href="#" target="_blank" rel="noreferrer">
+            CV
+          </a>
         </li>
         <li>
-          <a>info@jordansmith.cc</a>
+          <a href="#" target="_blank" rel="noreferrer">
+            info@jordansmith.cc
+          </a>
         </li>
       </ul>
     </footer>

@@ -4,8 +4,8 @@ import ProfilePic from "../public/profile_pic.png";
 const Header = () => {
   return (
     <>
-      <header>
-        <div className="header_profile_image">
+      <header className="site-header">
+        <div className="header-profile_image">
           <Image
             src={ProfilePic}
             alt="Profile picture of Jordan Smith"
@@ -13,12 +13,12 @@ const Header = () => {
             height={150}
           />
         </div>
-        <div className="header_profile_info">
-          <h1 className="page-title">Jordan Smith</h1>
-          <h3 className="page-subtitle">Dad, Husband, and Web Developer</h3>
-          <p className="page-blurb">
-            Self taught, focusing on a faster web. Currently building with React
-            and learning Next.js{" "}
+        <div className="header-profile_info">
+          <h1 className="header-title">Jordan Smith</h1>
+          <h3 className="header-subtitle">Dad, Husband, and Web Developer</h3>
+          <p className="header-blurb">
+            Self taught, focusing on a faster web. Currently building with
+            React.js, and learning Next.js{" "}
           </p>
         </div>
       </header>
