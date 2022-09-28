@@ -57,6 +57,11 @@
     justify-content: space-between;
 
 }
+
+.project-title:hover, .project-github-link p:hover, footer ul li:hover{
+    text-decoration: underline;
+
+}
 .project-1 {
     background-image: linear-gradient(to right,#fde68a,#fca5a5,#fecaca);
 }
