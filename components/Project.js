@@ -22,7 +22,12 @@ const Project = ({ projectTitle, projectLink, className, hostLink }) => {
               height={30}
               width={30}
             />
-            <a href={projectLink}>
+            <a
+              href={projectLink}
+              aria-label="Visit this project's github repository"
+              target="_blank"
+              rel="noreferrer"
+            >
               <p>Github</p>
             </a>
           </div>
