@@ -1,0 +1,37 @@
+.site-container {
+    max-width: 960px;
+    margin: auto;
+}
+.project-1, .project-2, .project-3 {
+    margin: auto;
+    padding: 4px;
+    border-radius: 10px;
+    width: 250px
+}
+
+.background {
+    background-color: #111;
+    color: #fff;
+    border-radius: 10px;
+    padding: 1em;
+    height: 200px;
+  }
+
+.projects-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.project-1 {
+    background-image: linear-gradient(to right,#fde68a,#fca5a5,#fecaca);
+}
+
+.project-2 {
+    background-image: linear-gradient(to right,#00d5ff,#00f798,#0d00c7,#8a24c9);
+}
+
+.project-3 {
+    background-image: linear-gradient(to right,#d8a7d5,#7551d9);
+
+}
+
