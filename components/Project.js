@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import GitHubLogo from "../public/GitHub_logo.png";
 
-const Project = ({ projectTitle, projectLink, className }) => {
+const Project = ({ projectTitle, projectLink, className, hostLink }) => {
   return (
     <a
-      href={projectLink}
+      href={hostLink}
       className="project-link"
       target="_blank"
       rel="noreferrer"
@@ -22,7 +22,9 @@ const Project = ({ projectTitle, projectLink, className }) => {
               height={30}
               width={30}
             />
-            <p>Github</p>
+            <a href={projectLink}>
+              <p>Github</p>
+            </a>
           </div>
         </div>
       </div>
