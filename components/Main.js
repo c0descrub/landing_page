@@ -34,12 +34,16 @@ const Main = () => {
             <a
               href="https://github.com/c0descrub"
               aria-label="Follow c0descrub on github"
+              rel="noreferrer"
+              target="_blank"
             >
               <button className="button follow-button">Follow</button>
             </a>
             <a
               href="https://github.com/c0descrub?tab=repositories"
               aria-label="See all c0descrub repositories on github"
+              rel="noreferrer"
+              target="_blank"
             >
               <button className="button projects-button">
                 See all projects
