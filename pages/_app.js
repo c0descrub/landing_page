@@ -10,7 +10,6 @@ function MyApp({ Component, pageProps }) {
         <title>Jordan Smith</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta httpEquiv="content-type" content="text/html; charset=utf-8" />
-
         <meta
           name="description"
           content="frontend web developer javascript react.js next.js"

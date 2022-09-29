@@ -11,6 +11,7 @@ const Header = () => {
             alt={"Profile picture of Jordan Smith"}
             width={150}
             height={150}
+            priority={true}
           />
         </div>
         <div className="header-profile_info">
