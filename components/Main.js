@@ -4,7 +4,7 @@ const Main = () => {
   return (
     <>
       <section className="main-content">
-        <h2 className="projects-title">Recent Projects</h2>
+        <h2 className="projects-title">bloop</h2>
         <div className="projects-container">
           <Project
             projectTitle="React Pokédex"

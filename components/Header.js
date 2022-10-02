@@ -1,7 +1,13 @@
 import Image from "next/image";
 import ProfilePic from "../public/profile_pic.png";
+import * as contentful from "contentful";
 
-const Header = () => {
+var client = contentful.createClient({
+  space: "kpmu5n50yi84",
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+});
+
+export default function Header(props) {
   return (
     <>
       <header className="site-header">
@@ -15,16 +21,33 @@ const Header = () => {
           />
         </div>
         <div className="header-profile_info">
-          <h1 className="header-title">Jordan Smith</h1>
-          <h3 className="header-subtitle">Dad, Husband, and Web Developer</h3>
-          <p className="header-blurb">
-            Self taught, focusing on a faster web. Currently building with
-            React.js, and learning Next.js{" "}
-          </p>
+          <h1 className="header-title">{props.title}</h1>
+          <h3 className="header-subtitle">{props.subtitle}</h3>
+          <p className="header-blurb">{props.descriptiopn}</p>
         </div>
       </header>
     </>
   );
-};
+}
 
-export default Header;
+export async function getStaticProps() {
+  // Get data from headless CMS
+  const page = await client.getEntry("1TVOA6nzh46dC9V42lXzvv");
+  console.log(page);
+
+  return {
+    props: {
+      title: page.fields.title,
+      subtitle: page.fields.subtitle,
+      description: page.fields.description,
+    },
+  };
+}
+
+// client.getEntry("1TVOA6nzh46dC9V42lXzvv").then(function (entry) {
+//   // logs the entry metadata
+//   console.log(entry.sys);
+
+//   // logs the field with ID title
+//   console.log(entry.fields.title);
+// });
