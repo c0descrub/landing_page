@@ -1,12 +1,19 @@
 import Image from "next/image";
 import GitHubLogo from "../public/GitHub_logo.png";
 
-const Project = ({ projectTitle, projectLink, className, hostLink }) => {
+const Project = ({
+  projectTitle,
+  projectLink,
+  className,
+  versionControl,
+  versionControlName,
+  repositoryLink,
+}) => {
   return (
     <div className={className}>
       <div className="background">
         <a
-          href={hostLink}
+          href={projectLink}
           className="project-link"
           target="_blank"
           rel="noreferrer"
@@ -17,18 +24,19 @@ const Project = ({ projectTitle, projectLink, className, hostLink }) => {
         <div className="project-github-link">
           <Image
             className="github-logo"
-            src={GitHubLogo}
+            // href={`https:${versionControl}`}
+            href={versionControl}
             alt={"Github Logo"}
             height={30}
             width={30}
           />
           <a
-            href={projectLink}
+            href={repositoryLink}
             aria-label="Visit this project's github repository"
             target="_blank"
             rel="noreferrer"
           >
-            <p>Github</p>
+            <p>{versionControlName}</p>
           </a>
         </div>
       </div>
