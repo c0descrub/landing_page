@@ -29,6 +29,7 @@ export async function getStaticProps() {
       ...invaders.fields,
       cv: cv.fields.file.url,
       profileImage: asset.fields.file.url,
+      projects: projects.items,
     },
   };
 }
@@ -53,6 +54,7 @@ export default function Home(props) {
         projectLink={props.projectLink}
         versionControlName={props.versionControlName}
         repositoryLink={props.repositoryLink}
+        projects={props.projects}
       />
       <Footer
         emailAddress={props.emailAddress}

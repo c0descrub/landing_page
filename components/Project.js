@@ -1,35 +1,28 @@
 import Image from "next/image";
 import GithubLogo from "./GithubLogo";
 
-const Project = ({
-  projectTitle,
-  projectLink,
-  className,
-  versionControl,
-  versionControlName,
-  repositoryLink,
-}) => {
+const Project = (props) => {
   return (
-    <div className={className}>
+    <div className={props.className}>
       <div className="background">
         <a
-          href={projectLink}
+          href={props.projectLink}
           className="project-link"
           target="_blank"
           rel="noreferrer"
         >
-          <h3 className="project-title">{projectTitle}</h3>
+          <h3 className="project-title">{props.projectTitle}</h3>
         </a>
 
         <div className="project-github-link">
           <GithubLogo />
           <a
-            href={repositoryLink}
+            href={props.repositoryLink}
             aria-label="Visit this project's github repository"
             target="_blank"
             rel="noreferrer"
           >
-            <p>{versionControlName}</p>
+            <p>{props.versionControlName}</p>
           </a>
         </div>
       </div>

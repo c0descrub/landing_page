@@ -7,27 +7,25 @@ const Main = (props) => {
         <h2 className="projects-title">{props.sectionTitle}</h2>
         <div className="projects-container">
           <Project
-            projectTitle="React Pokédex"
-            projectLink="https://github.com/c0descrub/pokedex-v2"
-            hostLink="https://pokedex.jordansmith.cc"
+            projectTitle={props.projects[2].fields.projectTitle}
+            projectLink={props.projects[2].fields.projectLink}
             className="project-1"
-            versionControlName={props.versionControlName}
+            versionControlName={props.projects[2].fields.versionControlName}
+            repositoryLink={props.projects[2].fields.repositoryLink}
           />
           <Project
-            projectTitle="React task tracker"
-            projectLink="https://github.com/c0descrub/todo_app"
-            hostLink="https://todo.jordansmith.cc"
+            projectTitle={props.projects[1].fields.projectTitle}
+            projectLink={props.projects[1].fields.projectLink}
             className="project-2"
-            versionControlName={props.versionControlName}
+            versionControlName={props.projects[1].fields.versionControlName}
+            repositoryLink={props.projects[1].fields.repositoryLink}
           />
           <Project
-            projectTitle={props.projectTitle}
-            projectLink={props.projectLink}
-            hostLink="https://invaders.jordansmith.cc"
+            projectTitle={props.projects[0].fields.projectTitle}
+            projectLink={props.projects[0].fields.projectLink}
             className="project-3"
-            invadersVersionControlName={props.versionControlName}
-            versionControlName={props.versionControlName}
-            repositoryLink={props.repositoryLink}
+            versionControlName={props.projects[0].fields.versionControlName}
+            repositoryLink={props.projects[0].fields.repositoryLink}
           />
         </div>
       </section>
