@@ -14,10 +14,7 @@ export async function getStaticProps() {
   const invaders = await client.getEntry("798XL6HDWn61dmTrm441KV");
   const projects = await client.getEntries({
     content_type: "project",
-    // But this is more common
-    // 'fields.slug': 'project-slug'
   });
-  console.log(projects.items[0].fields, projects.items[1].fields.projectTitle);
 
   // Get assets from headless CMS
   const asset = await client.getAsset("3RCx0tFmbSURaajS0GXv9Q");
