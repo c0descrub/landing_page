@@ -12,8 +12,8 @@ export async function getStaticProps() {
   // Get data from headless CMS
   const page = await client.getEntry("1TVOA6nzh46dC9V42lXzvv");
   const invaders = await client.getEntry("798XL6HDWn61dmTrm441KV");
-  const projects = await client.getContentTypes();
-  console.log(projects);
+  const projects = await client.getEntries();
+  console.log(projects.items);
 
   // Get assets from headless CMS
   const asset = await client.getAsset("3RCx0tFmbSURaajS0GXv9Q");
@@ -22,66 +22,42 @@ export async function getStaticProps() {
 
   return {
     props: {
-      title: page.fields.title,
-      subtitle: page.fields.subtitle,
-      description: page.fields.description,
-      profileImage: asset.fields.file.url,
-      sectionTitle: page.fields.sectionTitle,
-      username: page.fields.username,
-      emailAddress: page.fields.emailAddress,
-      callToAction: page.fields.callToAction,
-      repoLink: page.fields.repoLink,
-      githubLink: page.fields.githubLink,
+      ...page.fields,
+      ...invaders.fields,
       cv: cv.fields.file.url,
-      projectTitle: invaders.fields.projectTitle,
-      projectLink: invaders.fields.projectLink,
+      profileImage: asset.fields.file.url,
       versionControl: githubLogo.fields.file.url,
-      versionControlName: invaders.fields.versionControlName,
-      repositoryLink: invaders.fields.repositoryLink,
     },
   };
 }
 
-export default function Home({
-  profileImage,
-  title,
-  subtitle,
-  description,
-  sectionTitle,
-  emailAddress,
-  username,
-  callToAction,
-  repoLink,
-  githubLink,
-  cv,
-  projectTitle,
-  projectLink,
-  versionControl,
-  versionControlName,
-  repositoryLink,
-}) {
+export default function Home(props) {
   return (
     <div className="site-container">
       <Header
-        profileImage={profileImage}
-        title={title}
-        subtitle={subtitle}
-        description={description}
+        profileImage={props.profileImage}
+        title={props.title}
+        subtitle={props.subtitle}
+        description={props.description}
       />
       <Main
-        sectionTitle={sectionTitle}
-        emailAddress={emailAddress}
-        username={username}
-        callToAction={callToAction}
-        repoLink={repoLink}
-        githubLink={githubLink}
-        projectTitle={projectTitle}
-        projectLink={projectLink}
-        versionControl={versionControl}
-        versionControlName={versionControlName}
-        repositoryLink={repositoryLink}
+        sectionTitle={props.sectionTitle}
+        emailAddress={props.emailAddress}
+        username={props.username}
+        callToAction={props.callToAction}
+        repoLink={props.repoLink}
+        githubLink={props.githubLink}
+        projectTitle={props.projectTitle}
+        projectLink={props.projectLink}
+        versionControl={props.versionControl}
+        versionControlName={props.versionControlName}
+        repositoryLink={props.repositoryLink}
       />
-      <Footer emailAddress={emailAddress} githubLink={githubLink} cv={cv} />
+      <Footer
+        emailAddress={props.emailAddress}
+        githubLink={props.githubLink}
+        cv={props.cv}
+      />
     </div>
   );
 }

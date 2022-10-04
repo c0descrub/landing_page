@@ -1,21 +1,25 @@
-const Footer = ({ emailAddress, githubLink, cv }) => {
+const Footer = (props) => {
   return (
     <footer>
       <hr></hr>
       <ul>
         <li>
-          <a href={githubLink} target="_blank" rel="noreferrer">
+          <a href={props.githubLink} target="_blank" rel="noreferrer">
             Github
           </a>
         </li>
         <li>
-          <a href={`https:${cv}`} target="_blank" rel="noreferrer">
+          <a href={`https:${props.cv}`} target="_blank" rel="noreferrer">
             CV
           </a>
         </li>
         <li>
-          <a href={`mailto:${emailAddress}`} target="_blank" rel="noreferrer">
-            {emailAddress}
+          <a
+            href={`mailto:${props.emailAddress}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {props.emailAddress}
           </a>
         </li>
       </ul>

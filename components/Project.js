@@ -24,8 +24,7 @@ const Project = ({
         <div className="project-github-link">
           <Image
             className="github-logo"
-            // href={`https:${versionControl}`}
-            href={versionControl}
+            src={`https:${versionControl}`}
             alt={"Github Logo"}
             height={30}
             width={30}
