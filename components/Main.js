@@ -1,47 +1,50 @@
 import Project from "./Project";
 
-const Main = () => {
+const Main = (props) => {
   return (
     <>
       <section className="main-content">
-        <h2 className="projects-title">Recent Projects</h2>
+        <h2 className="projects-title">{props.sectionTitle}</h2>
         <div className="projects-container">
           <Project
-            projectTitle="React Pokédex"
-            projectLink="https://github.com/c0descrub/pokedex-v2"
-            hostLink="https://pokedex.jordansmith.cc"
+            projectTitle={props.projects[2].fields.projectTitle}
+            projectLink={props.projects[2].fields.projectLink}
             className="project-1"
+            versionControlName={props.projects[2].fields.versionControlName}
+            repositoryLink={props.projects[2].fields.repositoryLink}
           />
           <Project
-            projectTitle="React task tracker"
-            projectLink="https://github.com/c0descrub/todo_app"
-            hostLink="https://todo.jordansmith.cc"
+            projectTitle={props.projects[1].fields.projectTitle}
+            projectLink={props.projects[1].fields.projectLink}
             className="project-2"
+            versionControlName={props.projects[1].fields.versionControlName}
+            repositoryLink={props.projects[1].fields.repositoryLink}
           />
           <Project
-            projectTitle="Space Invaders"
-            projectLink="https://github.com/c0descrub/todo_app"
-            hostLink="https://invaders.jordansmith.cc"
+            projectTitle={props.projects[0].fields.projectTitle}
+            projectLink={props.projects[0].fields.projectLink}
             className="project-3"
+            versionControlName={props.projects[0].fields.versionControlName}
+            repositoryLink={props.projects[0].fields.repositoryLink}
           />
         </div>
       </section>
       <section className="github-plug">
-        <h3 className="github-plug-title">All projects available on Github</h3>
+        <h3 className="github-plug-title">{props.callToAction}</h3>
         <div className="github-plug-cta">
-          <p className="github-plug-cta--username">c0descrub</p>
+          <p className="github-plug-cta--username">{props.username}</p>
           <div className="github-plug-cta--buttons">
             <a
-              href="https://github.com/c0descrub"
-              aria-label="Follow c0descrub on github"
+              href={props.githubLink}
+              aria-label={`follow ${props.username} on Github`}
               rel="noreferrer"
               target="_blank"
             >
               <button className="button follow-button">Follow</button>
             </a>
             <a
-              href="https://github.com/c0descrub?tab=repositories"
-              aria-label="See all c0descrub repositories on github"
+              href={props.repoLink}
+              aria-label={`See all ${props.username} repositories on Github`}
               rel="noreferrer"
               target="_blank"
             >
