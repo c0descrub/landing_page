@@ -12,12 +12,10 @@ export async function getStaticProps() {
   // Get data from headless CMS
   const page = await client.getEntry("1TVOA6nzh46dC9V42lXzvv");
   const invaders = await client.getEntry("798XL6HDWn61dmTrm441KV");
-  const projects = await client.getEntries();
 
   // Get assets from headless CMS
   const asset = await client.getAsset("3RCx0tFmbSURaajS0GXv9Q");
   const cv = await client.getAsset("LLLGdWyNzVlsE1Fz22SFD");
-  const githubLogo = await client.getAsset("7G3PnizDFjPLWV3Z2EQY3p");
 
   return {
     props: {
@@ -25,7 +23,6 @@ export async function getStaticProps() {
       ...invaders.fields,
       cv: cv.fields.file.url,
       profileImage: asset.fields.file.url,
-      versionControl: githubLogo.fields.file.url,
     },
   };
 }
@@ -48,7 +45,6 @@ export default function Home(props) {
         githubLink={props.githubLink}
         projectTitle={props.projectTitle}
         projectLink={props.projectLink}
-        versionControl={props.versionControl}
         versionControlName={props.versionControlName}
         repositoryLink={props.repositoryLink}
       />

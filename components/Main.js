@@ -11,7 +11,6 @@ const Main = (props) => {
             projectLink="https://github.com/c0descrub/pokedex-v2"
             hostLink="https://pokedex.jordansmith.cc"
             className="project-1"
-            versionControl={props.versionControl}
             versionControlName={props.versionControlName}
           />
           <Project
@@ -19,7 +18,6 @@ const Main = (props) => {
             projectLink="https://github.com/c0descrub/todo_app"
             hostLink="https://todo.jordansmith.cc"
             className="project-2"
-            versionControl={props.versionControl}
             versionControlName={props.versionControlName}
           />
           <Project
@@ -28,7 +26,6 @@ const Main = (props) => {
             hostLink="https://invaders.jordansmith.cc"
             className="project-3"
             invadersVersionControlName={props.versionControlName}
-            versionControl={props.versionControl}
             versionControlName={props.versionControlName}
             repositoryLink={props.repositoryLink}
           />

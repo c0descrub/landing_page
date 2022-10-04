@@ -1,5 +1,5 @@
 import Image from "next/image";
-import GitHubLogo from "../public/GitHub_logo.png";
+import GithubLogo from "./GithubLogo";
 
 const Project = ({
   projectTitle,
@@ -22,13 +22,7 @@ const Project = ({
         </a>
 
         <div className="project-github-link">
-          <Image
-            className="github-logo"
-            src={`https:${versionControl}`}
-            alt={"Github Logo"}
-            height={30}
-            width={30}
-          />
+          <GithubLogo />
           <a
             href={repositoryLink}
             aria-label="Visit this project's github repository"
