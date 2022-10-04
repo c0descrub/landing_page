@@ -13,7 +13,6 @@ export async function getStaticProps() {
   const page = await client.getEntry("1TVOA6nzh46dC9V42lXzvv");
   const invaders = await client.getEntry("798XL6HDWn61dmTrm441KV");
   const projects = await client.getEntries();
-  console.log(projects.items);
 
   // Get assets from headless CMS
   const asset = await client.getAsset("3RCx0tFmbSURaajS0GXv9Q");
