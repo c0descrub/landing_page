@@ -1,204 +1,217 @@
 /*Header*/
 .site-header {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    margin-top: 40px;
-    margin-bottom: 50px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 50px;
 }
 
 .header-profile_image {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .header-profile_info {
-    max-width: 70%;
+  max-width: 70%;
 }
 
 .header-title {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 .header-subtitle {
-    font-size: 1rem;
-    font-weight: 400;
-    margin-bottom: 30px;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 30px;
 }
 
 .header-blurb {
-    color: #999;
-    font-size: 1rem;
+  color: #999;
+  font-size: 1rem;
 }
-
 
 /*Project Cards*/
 
 .projects-title {
-    font-size: 2rem;
-    margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-.project-1, .project-2, .project-3 {
-    padding: 4px;
-    border-radius: 10px;
-    width: 230px;
+.project-1,
+.project-2,
+.project-3,
+.project-4 {
+  padding: 4px;
+  border-radius: 10px;
+  width: 230px;
+  margin: 10px;
 }
 
 .background {
-    background-color: #111;
-    color: #fff;
-    border-radius: 10px;
-    padding: 1em;
-    height: 180px;
-  }
+  background-color: #111;
+  color: #fff;
+  border-radius: 10px;
+  padding: 1em;
+  height: 180px;
+}
 
 .projects-container {
-    display: flex;
-    justify-content: space-between;
-
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.project-title:hover, .project-github-link p:hover, footer ul li:hover{
-    text-decoration: underline;
-
+.project-title:hover,
+.project-github-link p:hover,
+footer ul li:hover {
+  text-decoration: underline;
 }
 .project-1 {
-    background-image: linear-gradient(to right,#fde68a,#fca5a5,#fecaca);
+  background-image: linear-gradient(to right, #fde68a, #fca5a5, #fecaca);
 }
 
 .project-2 {
-    background-image: linear-gradient(to right,#00d5ff,#00f798,#0d00c7,#8a24c9);
+  background-image: linear-gradient(
+    to right,
+    #00d5ff,
+    #00f798,
+    #0d00c7,
+    #8a24c9
+  );
 }
 
 .project-3 {
-    background-image: linear-gradient(to right,#d8a7d5,#7551d9);
+  background-image: linear-gradient(to right, #d8a7d5, #7551d9);
+}
 
+.project-4 {
+  background-image: linear-gradient(to right, #ff0f7b, #f89b29);
 }
 
 .project-github-link {
-    display: flex;
-    align-items: center;
-    margin-top: 95px;
+  display: flex;
+  align-items: center;
+  margin-top: 95px;
 }
 
 .project-github-link p {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .main-content {
-    margin-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 /*Github plug*/
 
 .github-plug {
-    background-color: rgb(25, 25, 25);
-    border: 1px solid #222;
-    border-radius: 4px;
-    padding: 30px 30px 40px 30px;
-    margin-bottom: 100px;
+  background-color: rgb(25, 25, 25);
+  border: 1px solid #222;
+  border-radius: 4px;
+  padding: 30px 30px 40px 30px;
+  margin-bottom: 100px;
 }
 
 .github-plug-title {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .github-plug-cta {
-    background-color: #222;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-    border-radius: 4px;
+  background-color: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border-radius: 4px;
 }
 
 .github-plug-cta--username {
-    color: #999;
-    margin-left: 10px;
+  color: #999;
+  margin-left: 10px;
 }
 
 .button {
-    background-color: #444;
-    padding: 5px 20px 5px 20px;
-    border-radius: 4px;
-    font-weight: 600;
+  background-color: #444;
+  padding: 5px 20px 5px 20px;
+  border-radius: 4px;
+  font-weight: 600;
 }
 
 .button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .follow-button {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 /*Footer*/
 
 hr {
-    margin-bottom: 30px;
-    height: 1px;
-    background-color: #222;
-    border: none;
+  margin-bottom: 30px;
+  height: 1px;
+  background-color: #222;
+  border: none;
 }
 
 footer ul {
-    all: unset;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    color: #999
+  all: unset;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  color: #999;
 }
 
 @media (max-width: 800px) {
+  .site-header {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .site-header {
-        display: flex;
-        flex-direction: column;
-    }
+  .header-profile_image {
+    margin: auto;
+  }
+  .site-container {
+    max-width: 90%;
+  }
 
-    .header-profile_image {
-        margin: auto;
-    }
-    .site-container {
-        max-width: 90%;
-    }
+  .header-profile_info {
+    max-width: 100%;
+  }
 
-    .header-profile_info {
-        max-width: 100%;
-    }
+  .projects-title {
+    margin-bottom: 50px;
+  }
 
-    .projects-title {
-        margin-bottom: 50px;
-    }
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+  }
 
-    .projects-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-content: space-between;
-    }
+  .project-1,
+  .project-2 {
+    margin-bottom: 20px;
+  }
 
-    .project-1, .project-2 {
-        margin-bottom: 20px;
-    }
+  .github-plug-title {
+    text-align: center;
+  }
 
-    .github-plug-title {
-        text-align: center;
-    }
+  .github-plug-cta--username {
+    display: none;
+  }
 
-    .github-plug-cta--username {
-        display: none;
-    }
+  .github-plug-cta {
+    justify-content: space-evenly;
+  }
 
-    .github-plug-cta {
-        justify-content: space-evenly;
-    }
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    footer ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    footer ul li {
-        margin-bottom: 20px;
-    }
+  footer ul li {
+    margin-bottom: 20px;
+  }
 }
